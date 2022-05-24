@@ -3,8 +3,10 @@ import { createPinia } from 'pinia'
 import router from './router/index'
 import App from './App.vue'
 
-
 const app = createApp(App);
+
+import directive from '@/directive'
+directive(app)
 
 const pinia = createPinia()
 // pinia.use(SomePiniaPlugin) // 给 pinia 装插件
