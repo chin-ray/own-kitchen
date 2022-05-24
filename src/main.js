@@ -15,7 +15,7 @@ app.use(router) // 注册router
 import SvgIcon from '@/icons/SvgIcon.vue'
 app.component('svg-icon', SvgIcon)
 const requireAll = requireContext => requireContext.keys().map(requireContext)
-const req = require.context('@/icons/common', false, /.svg$/)
+const req = require.context('@/icons/svg', false, /.svg$/)
 requireAll(req)
 
 import { Tabbar, TabbarItem, Button, Icon } from 'vant';
