@@ -1,21 +1,18 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ props.msg }}</h1>
     <van-button type="primary">主要按钮</van-button>
     <van-button type="success">成功按钮</van-button>
   </div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
-};
+<script setup>
+import { defineProps } from "vue";
+const props = defineProps({
+  msg: String,
+});
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
