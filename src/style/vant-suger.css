@@ -1,0 +1,4 @@
+body {
+    --van-button-default-height: 32px;
+    --van-button-border-radius: var(--van-border-radius-lg);
+}

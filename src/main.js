@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import router from './router/index'
 import App from './App.vue'
+import '@/style/vant-suger.css'
 
 const app = createApp(App);
 
@@ -26,5 +27,8 @@ app.use(Tabbar);
 app.use(TabbarItem);
 app.use(Button);
 app.use(Icon);
+
+import KitButton from '@/components/kit-components/KitButton.vue'
+app.component('KitButton', KitButton);
 
 app.mount('#app')

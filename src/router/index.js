@@ -14,6 +14,22 @@ export const routes = [
         ]
     },
     {
+        path: '/sign-up', // 注册
+        component: () => import('@/views/sign-pages/SignUp.vue')
+    },
+    {
+        path: '/sign-in', // 登录
+        component: () => import('@/views/sign-pages/SignIn.vue')
+    },
+    {
+        path: '/404',
+        component: () => import('@/views/error-pages/404.vue')
+    },
+    {
+        path: '/401',
+        component: () => import('@/views/error-pages/401.vue')
+    },
+    {
         path: '/',
         component: Layout,
         redirect: 'home',
