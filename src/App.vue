@@ -1,12 +1,15 @@
 <template>
   <router-view />
   <van-tabbar v-model="active">
-    <van-tabbar-item icon="home-o" replace to="/home">
+    <van-tabbar-item replace to="/home">
       <svg-icon icon-class="home" />
     </van-tabbar-item>
-    <van-tabbar-item icon="friends-o" badge="5">标签</van-tabbar-item>
-    <van-tabbar-item icon="search">标签</van-tabbar-item>
-    <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
+    <van-tabbar-item>
+      <svg-icon icon-class="message" />
+    </van-tabbar-item>
+    <van-tabbar-item>
+      <svg-icon icon-class="me2" />
+    </van-tabbar-item>
   </van-tabbar>
 </template>
 
