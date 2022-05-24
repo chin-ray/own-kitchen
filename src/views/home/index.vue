@@ -1,4 +1,4 @@
-<template>1</template>
+<template>首页</template>
 
 <script setup></script>
 <script>

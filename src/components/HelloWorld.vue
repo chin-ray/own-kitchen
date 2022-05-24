@@ -1,4 +1,5 @@
 <template>
+  <img alt="Vue logo" src="@/assets/logo.png" />
   <div class="hello">
     <h1>{{ props.msg }}</h1>
     <van-button type="primary">主要按钮</van-button>

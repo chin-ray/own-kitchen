@@ -10,10 +10,11 @@ const pinia = createPinia()
 app.use(pinia) // 注册pinia
 app.use(router) // 注册router
 
-import { Button, Tabbar, TabbarItem } from 'vant';
+import { Tabbar, TabbarItem, Button, Icon } from 'vant';
 
-app.use(Button);
 app.use(Tabbar);
 app.use(TabbarItem);
+app.use(Button);
+app.use(Icon);
 
 app.mount('#app')
