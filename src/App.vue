@@ -1,14 +1,14 @@
 <template>
   <router-view />
-  <van-tabbar v-model="active">
-    <van-tabbar-item replace to="/home">
-      <svg-icon icon-class="home" />
-    </van-tabbar-item>
-    <van-tabbar-item>
-      <svg-icon icon-class="message" />
-    </van-tabbar-item>
-    <van-tabbar-item>
-      <svg-icon icon-class="me2" />
+  <van-tabbar v-model="active" active-color="#717171" inactive-color="#d3d3d3">
+    <van-tabbar-item
+      v-for="(item, index) in tabbarItems"
+      :key="index"
+      replace
+      :to="item.to"
+      :badge="item.badge"
+    >
+      <svg-icon :icon-class="item.icon" />
     </van-tabbar-item>
   </van-tabbar>
 </template>
@@ -16,6 +16,21 @@
 <script setup>
 import { ref } from "vue";
 const active = ref(0);
+const tabbarItems = ref([
+  { icon: "home", to: "/", badge: "" },
+  { icon: "message", to: "/messages", badge: "" },
+  { icon: "me2", to: "/me", badge: "" },
+]);
 </script>
 
-<style></style>
+<style scoped>
+.van-hairline--top-bottom:after,
+.van-hairline-unset--top-bottom:after {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.van-tabbar-item .van-badge__wrapper .van-tabbar-item__icon {
+  width: 1em !important;
+  margin-bottom: 0px;
+}
+</style>
