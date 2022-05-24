@@ -1,10 +1,6 @@
 <template>
-  <van-tabbar
-    v-model="active"
-    active-color="#717171"
-    inactive-color="#d3d3d3"
-    @change="onTabbarChange"
-  >
+  <router-view />
+  <van-tabbar v-model="active" active-color="#717171" inactive-color="#d3d3d3">
     <van-tabbar-item
       v-for="(item, index) in tabbarItems"
       :key="index"
@@ -25,18 +21,12 @@ export default {
 </script>
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
-const router = useRouter();
-const active = ref("home");
+const active = ref("");
 const tabbarItems = ref([
-  { name: "home", icon: "home", to: "/home", badge: "" },
+  { name: "", icon: "home", to: "/", badge: "" },
   { name: "messages", icon: "message", to: "/messages", badge: "" },
   { name: "me", icon: "me2", to: "/me", badge: "" },
 ]);
-
-const onTabbarChange = (pathname) => {
-  router.replace(`/${pathname}`);
-};
 </script>
 
 <style scoped>

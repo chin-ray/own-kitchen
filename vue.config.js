@@ -6,6 +6,22 @@ function resolve(dir) {
 }
 
 module.exports = defineConfig({
+  devServer: {
+    host: '0.0.0.0',
+    // https:true,
+    port: 8081,
+    client: {
+      webSocketURL: 'ws://0.0.0.0:8081/ws',
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    // proxy: {
+    //   "/api": {
+    //     target: "http://**.**.***.*** ", //这是服务器地址
+    //   },
+    // },
+  },
   transpileDependencies: true,
   publicPath: './', // 修改相对路径
   css: {

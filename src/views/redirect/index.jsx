@@ -3,6 +3,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { onBeforeMount } from 'vue'
 
 export default defineComponent({
+  name: 'redirectIndex',
   setup() {
     const route = useRoute()
     const router = useRouter()

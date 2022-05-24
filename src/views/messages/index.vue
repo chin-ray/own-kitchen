@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "MessageIndex",
+  name: "MessagesIndex",
 };
 </script>
 <script setup></script>

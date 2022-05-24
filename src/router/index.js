@@ -1,30 +1,34 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const Layout = () => import('@/layout/index.vue')
-const Home = () => import('@/views/home/index.vue')
-const Me = () => import('@/views/me/index.vue')
-const Messages = () => import('@/views/messages/index.vue')
 
-export const routes = [{
-    path: '/redirect',
-    hidden: true,
-    component: Layout,
-    children: [
-        {
-            path: '/redirect/:path(.*)',
-            component: () => import('@/views/redirect')
-        }
-    ]
-},
-{ path: '/', name: 'layout', component: Layout, },
-{ path: '/home', name: 'home', component: Home, },
-{ path: '/me', name: 'me', component: Me },
-{ path: '/messages', name: 'messages', component: Messages },
+export const routes = [
+    {
+        path: '/redirect',
+        component: Layout,
+        children: [
+            {
+                path: '/redirect/:path(.*)',
+                component: () => import('@/views/redirect')
+            }
+        ]
+    },
+    {
+        path: '/',
+        component: Layout,
+        redirect: 'home',
+        children: [
+            { path: '/home', component: () => import('@/views/home/index.vue') },
+            { path: '/me', component: () => import('@/views/me/index.vue') },
+            { path: '/messages', component: () => import('@/views/messages/index.vue') },
+        ]
+    },
 ]
+
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     scrollBehavior: () => ({ top: 0 }),
-    routes
+    routes: routes
 })
 
 export default router
