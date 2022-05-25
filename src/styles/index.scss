@@ -3,13 +3,12 @@
 @import "./scss-suger.scss";
 @import "./reset-style.scss";
 @import "./vant-style-overflow/index.scss";
+@import "./global/index.scss";
 
 //scroll
 @mixin main-show-wh() {
   /* css 声明 */
-  height: calc(
-    100vh - #{$navBarHeight} - #{$tagViewHeight} - #{$appMainPadding * 2}
-  );
+  height: calc(100vh - #{$tabbarHeight});
   width: 100%;
 }
 .scroll-y {
