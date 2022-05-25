@@ -34,9 +34,9 @@ export const routes = [
         component: Layout,
         redirect: 'home',
         children: [
-            { path: '/home', component: () => import('@/views/home/index.vue') },
-            { path: '/me', component: () => import('@/views/me/index.vue') },
-            { path: '/messages', component: () => import('@/views/messages/index.vue') },
+            { path: '/home', name: 'home', component: () => import('@/views/home/index.vue') },
+            { path: '/me', name: 'me', component: () => import('@/views/me/index.vue') },
+            { path: '/messages', name: 'messages', component: () => import('@/views/messages/index.vue') },
         ]
     },
 ]

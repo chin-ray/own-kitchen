@@ -20,13 +20,23 @@ export default {
 };
 </script>
 <script setup>
-import { ref } from "vue";
-const active = ref("");
+import { ref, watch, getCurrentInstance } from "vue";
+const { proxy } = getCurrentInstance();
+const active = ref(proxy.$route.name);
 const tabbarItems = ref([
-  { name: "", icon: "home", to: "/", badge: "" },
+  { name: "home", icon: "home", to: "/", badge: "" },
   { name: "messages", icon: "message", to: "/messages", badge: "" },
   { name: "me", icon: "me2", to: "/me", badge: "" },
 ]);
+
+watch(
+  () => {
+    return proxy.$route.name;
+  },
+  (val) => {
+    active.value = val;
+  }
+);
 </script>
 
 <style scoped>
