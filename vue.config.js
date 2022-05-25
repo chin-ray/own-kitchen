@@ -24,11 +24,17 @@ module.exports = defineConfig({
   },
   transpileDependencies: true,
   publicPath: './', // 修改相对路径
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: []
+    }
+  },
   css: {
     loaderOptions: {
-      sass: {
-        // 根据自己样式文件的位置调整
-        data: `@import "@/styles/global.scss";`
+      //define global scss variable
+      scss: {
+        additionalData: `@import "@/styles/variables.scss";`
       }
     }
   },

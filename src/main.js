@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import router from './router/index'
 import App from './App.vue'
-import '@/style/vant-suger.css'
+import '@/styles/index.scss' // global css
 
 const app = createApp(App);
 

@@ -1,0 +1,34 @@
+@import "./vant-suger.scss";
+@import "./variables.scss";
+
+//scroll
+@mixin main-show-wh() {
+  /* css 声明 */
+  height: calc(
+    100vh - #{$navBarHeight} - #{$tagViewHeight} - #{$appMainPadding * 2}
+  );
+  width: 100%;
+}
+.scroll-y {
+  @include main-show-wh();
+  overflow-y: auto;
+}
+.scroll-x {
+  @include main-show-wh();
+  overflow-x: auto;
+}
+.scroll-xy {
+  @include main-show-wh();
+  overflow: auto;
+}
+
+.nav-svg-icon {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  vertical-align: -2px;
+}
+.nav-svg-icon:hover {
+  transform: scale(1.2);
+  transition: all 0.1s;
+}
