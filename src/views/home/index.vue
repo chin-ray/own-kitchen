@@ -1,8 +1,11 @@
-<template>首页</template>
+<template>
+  <div>Header</div>
+  <div>Content</div>
+</template>
 
-<script setup></script>
 <script>
 export default {
   name: "HomeIndex",
 };
 </script>
+<script setup></script>

@@ -2,7 +2,7 @@
 @import "./transition.scss";
 @import "./scss-suger.scss";
 @import "./reset-style.scss";
-@import "./vant-style-overflow.scss";
+@import "./vant-style-overflow/index.scss";
 
 //scroll
 @mixin main-show-wh() {
