@@ -1,6 +1,6 @@
 <template>
   <div class="page-header">
-    <kit-navbar></kit-navbar>
+    <kit-navbar title="聊天群组"></kit-navbar>
   </div>
   <div class="page-content global-padding">
     <h3>Content</h3>
