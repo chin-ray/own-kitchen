@@ -1,6 +1,8 @@
 <template>
-  我的
-  <kit-button type="primary" @click="toSignIn">去登录</kit-button>
+  <div class="global-padding">
+    我的
+    <kit-button type="primary" @click="toSignIn">去登录</kit-button>
+  </div>
 </template>
 
 <script>
