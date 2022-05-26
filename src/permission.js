@@ -8,7 +8,7 @@ import 'nprogress/nprogress.css'
 import getPageTitle from '@/utils/getPageTitle'
 
 const whiteList = ['/login', '/404', '/401'] // no redirect whitelist
-router.beforeEach(async (to: any, from, next) => {
+router.beforeEach(async (to, from, next) => {
   // start progress bar
   if (settings.isNeedNprogress) NProgress.start()
   // set page title
@@ -41,7 +41,7 @@ router.beforeEach(async (to: any, from, next) => {
           store.commit('permission/M_routes', accessRoutes)
           // dynamically add accessible routes
           //router4 addRoutes destroyed
-          accessRoutes.forEach((route: any) => {
+          accessRoutes.forEach((route) => {
             router.addRoute(route)
           })
           //already get userInfo
