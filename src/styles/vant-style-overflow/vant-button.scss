@@ -2,9 +2,10 @@
   --van-button-normal-padding: 6px 10px;
   --van-button-border-radius: 9px;
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0 10px 20px -10px #646566;
 }
 .van-button:hover {
-  box-shadow: 0 10px 20px -10px #646566;
+  // box-shadow: 0 10px 20px -10px #646566;
 }
 .van-button:active {
   transform: translateY(2px);
