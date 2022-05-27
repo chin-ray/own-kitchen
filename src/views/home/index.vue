@@ -20,7 +20,6 @@ $colorContent: #fcfcfc;
 $contentBorderRadius: 15px;
 
 .page-wrapper {
-  // background-image: url("@/assets/background.png");
 }
 .page-header {
   height: 100vh;
