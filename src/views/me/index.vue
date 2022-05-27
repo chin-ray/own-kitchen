@@ -11,11 +11,11 @@
             @click="toSignIn"
           />
           <div class="userInfo columnSS">
-            <b>王某某</b>
+            <b>蔺</b>
             <span>北京 1321321321</span>
           </div>
         </div>
-        <svg-icon icon-class="home" />
+        <svg-icon icon-class="setting" />
       </div>
     </div>
     <div class="content">

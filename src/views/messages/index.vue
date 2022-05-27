@@ -1,17 +1,21 @@
 <template>
   <div>
-    <h3 class="p-g">Content</h3>
-    <van-cell-group>
-      <van-cell value="周三 22:11" label="描述信息">
-        <template #icon>
-          <van-image width="45" height="45" />
+    <kit-navbar title="" leftIcon="logo" leftLogo rightIcon="add"></kit-navbar>
+    <van-swipe-cell v-for="item in mesList" :key="item.avatar">
+      <van-card :title="item.nickname" :desc="item.mes" @click="toDetail">
+        <template #thumb>
+          <van-image round width="45" height="45" :src="item.avatar" />
         </template>
-        <template #title>
-          <span>单元格</span>
-        </template>
-      </van-cell>
-      <van-cell title="单元格" value="周二 12:12" label="描述信息" />
-    </van-cell-group>
+        <template #num> {{ item.time }} </template>
+      </van-card>
+      <template #right>
+        <van-button square text="删除" type="danger" />
+      </template>
+    </van-swipe-cell>
+    <div
+      class="last-content"
+      :style="`height: calc(100vh - 46px - ${mesList.length * 67}px)`"
+    ></div>
   </div>
 </template>
 
@@ -20,14 +24,71 @@ export default {
   name: "MessagesIndex",
 };
 </script>
+<script setup>
+import { ref, getCurrentInstance } from "vue";
+const { proxy } = getCurrentInstance();
+
+const mesList = ref([
+  {
+    avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
+    nickname: "赖某",
+    mes: "你好",
+    time: "11:51",
+  },
+  {
+    avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
+    nickname: "赖某",
+    mes: "你好",
+    time: "11:51",
+  },
+]);
+
+const toDetail = () => {
+  proxy.$router.replace({
+    path: `/redirect/messages/detail`,
+  });
+};
+</script>
 
 <style scoped lang="scss">
-:deep(.van-cell) {
-  .van-image {
-    margin-right: 10px;
+:deep(.van-swipe-cell) {
+  .van-card::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    right: var(--van-padding-md);
+    bottom: 0;
+    left: var(--van-padding-md);
+    border-bottom: 1px solid var(--van-cell-border-color);
+    transform: scaleY(0.5);
   }
-  .van-cell__value {
-    font-size: var(--van-font-size-xs);
+  .van-card__thumb {
+    width: 50px;
+    height: 50px;
   }
+  .van-card__content {
+    min-height: 0;
+    .van-card__title {
+      font-weight: 600;
+    }
+    .van-card__desc {
+      margin-top: 0.6em;
+      font-weight: 400;
+    }
+    .van-card__num {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .van-button {
+    width: 60px;
+    height: 100%;
+  }
+}
+.last-content {
+  padding-bottom: 50px;
+  background-color: var(--light);
 }
 </style>

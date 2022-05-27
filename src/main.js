@@ -21,7 +21,7 @@ const requireAll = requireContext => requireContext.keys().map(requireContext)
 const req = require.context('@/icons/svg', false, /.svg$/)
 requireAll(req)
 
-import { Tabbar, TabbarItem, NavBar, Button, Icon, CellGroup, Cell, SwipeCell, Image as VanImage } from 'vant';
+import { Tabbar, TabbarItem, NavBar, Button, Icon, CellGroup, Cell, SwipeCell, Image as VanImage, Card, Sticky } from 'vant';
 
 app.use(Tabbar);
 app.use(TabbarItem);
@@ -32,6 +32,8 @@ app.use(CellGroup);
 app.use(Cell);
 app.use(SwipeCell);
 app.use(VanImage);
+app.use(Card);
+app.use(Sticky);
 
 import KitButton from '@/components/kit-components/KitButton.vue'
 import KitNavbar from '@/components/kit-components/KitNavbar.vue'

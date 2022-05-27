@@ -36,9 +36,14 @@ export const routes = [
         children: [
             { path: '/home', name: 'home', component: () => import('@/views/home/index.vue') },
             { path: '/me', name: 'me', component: () => import('@/views/me/index.vue') },
-            { path: '/messages', name: 'messages', component: () => import('@/views/messages/index.vue') },
+            { path: '/messages', name: 'messages', component: () => import('@/views/messages/index.vue'), },
         ]
     },
+    {
+        path: '/messages/detail',
+        name: 'mesDetail',
+        component: () => import('@/views/messages/detail.vue')
+    }
 ]
 
 const router = createRouter({
