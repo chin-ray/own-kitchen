@@ -1,9 +1,9 @@
 <template>
-  <div class="page-wrapper scroll-y">
-    <div class="page-header global-padding">Header</div>
-    <div class="page-content global-padding">
+  <div class="page-wrapper global-padding scroll-y">
+    <div class="page-header">Header</div>
+    <!-- <div class="page-content global-padding">
       <h3>Content</h3>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -20,14 +20,14 @@ $colorContent: #fcfcfc;
 $contentBorderRadius: 15px;
 
 .page-wrapper {
+  // background-image: url("@/assets/background.png");
 }
 .page-header {
-  height: 160px;
-  background-color: $colorHeader;
+  height: 100vh;
 }
 .page-content {
   height: 1000px;
-  background-color: $colorContent;
+  background-color: #ebecef;
   border-top-left-radius: $contentBorderRadius;
   border-top-right-radius: $contentBorderRadius;
   margin-top: calc(0px - #{$contentBorderRadius});
