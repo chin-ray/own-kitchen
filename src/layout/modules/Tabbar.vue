@@ -4,7 +4,7 @@
       v-for="(item, index) in tabbarItems"
       :key="index"
       replace
-      :to="item.to"
+      :to="item.link"
       :name="item.name"
       :badge="item.badge"
     >
@@ -21,9 +21,9 @@ import { ref, watch, getCurrentInstance } from "vue";
 const { proxy } = getCurrentInstance();
 const active = ref(proxy.$route.name);
 const tabbarItems = ref([
-  { name: "home", icon: "home", to: "/", badge: "" },
-  { name: "messages", icon: "message", to: "/messages", badge: "" },
-  { name: "me", icon: "me2", to: "/me", badge: "" },
+  { name: "home", icon: "home", link: "/", badge: "" },
+  { name: "messages", icon: "message", link: "/messages", badge: "" },
+  { name: "me", icon: "me2", link: "/me", badge: "" },
 ]);
 
 watch(

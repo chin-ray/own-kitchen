@@ -1,7 +1,7 @@
 <template>
-  <div class="page-wrapper global-padding scroll-y">
+  <div class="page-wrapper p-g scroll-y">
     <div class="page-header">Header</div>
-    <!-- <div class="page-content global-padding">
+    <!-- <div class="page-content p-g">
       <h3>Content</h3>
     </div> -->
   </div>

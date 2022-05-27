@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="global-padding">Content</h3>
+    <h3 class="p-g">Content</h3>
     <van-cell-group>
       <van-cell value="周三 22:11" label="描述信息">
         <template #icon>
