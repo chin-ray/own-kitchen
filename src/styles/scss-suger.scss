@@ -1,4 +1,5 @@
 body {
+  --default: #f0f2f5;
   --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
@@ -253,6 +254,9 @@ flex布局 第一个字母为主轴
   align-items: flex-end;
 }
 //font-size
+.font-sizePx10 {
+  font-size: 10px;
+}
 .font-sizePx12 {
   font-size: 12px;
 }
@@ -527,6 +531,9 @@ flex布局 第一个字母为主轴
   color: var(--white) !important;
 }
 
+.bg-default {
+  background-color: var(--default) !important;
+}
 .bg-primary {
   background-color: var(--primary) !important;
 }
