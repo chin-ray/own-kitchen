@@ -13,7 +13,7 @@
       </template>
     </van-swipe-cell>
     <div
-      class="last-content"
+      class="last-content bg-default"
       :style="`height: calc(100vh - 46px - ${mesList.length * 67}px)`"
     ></div>
   </div>
@@ -89,6 +89,5 @@ const toDetail = () => {
 }
 .last-content {
   padding-bottom: 50px;
-  background-color: var(--light);
 }
 </style>
