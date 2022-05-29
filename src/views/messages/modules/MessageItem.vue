@@ -1,5 +1,5 @@
 <template>
-  <div class="rowSE" v-if="state.mesInfo.isMe">
+  <div class="rowEE" v-if="state.mesInfo.isMe">
     <div class="columnSS mr-1">
       <message-bubble :text="state.mesInfo.mes" :isMe="state.mesInfo.isMe" />
     </div>

@@ -31,13 +31,13 @@ const { proxy } = getCurrentInstance();
 const mesList = ref([
   {
     avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
-    nickname: "赖某",
+    nickname: "秦某",
     mes: "你好",
     time: "11:51",
   },
   {
     avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
-    nickname: "赖某",
+    nickname: "秦某",
     mes: "你好",
     time: "11:51",
   },

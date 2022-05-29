@@ -30,7 +30,7 @@ const props = defineProps({
   userInfo: {
     type: Object,
     default() {
-      return { name: "赖某" };
+      return { name: "秦某" };
     },
   },
 });
@@ -42,8 +42,8 @@ const state = reactive({
 // 获取聊天记录
 const getMessageList = () => {
   let messageList = [
-    { name: "赖某", mes: "你好" },
-    { name: "赖某", mes: "你好", isMe: true },
+    { name: "秦某", mes: "你好" },
+    { name: "秦某", mes: "你好", isMe: true },
   ];
   state.messageList = messageList;
 };
