@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="header p-g">
-      <div class="py-1 pr rowBS">
+      <div class="py-2 pr rowBS">
         <div class="rowSC">
           <van-image
             round
@@ -61,7 +61,7 @@ const toSignIn = () => {
 
 <style scoped lang="scss">
 .header {
-  height: 100px;
+  height: 140px;
   background-color: var(--light);
   .userInfo {
     margin-left: 1em;
