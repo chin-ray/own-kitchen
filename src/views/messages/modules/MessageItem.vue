@@ -1,16 +1,18 @@
 <template>
-  <div class="rowEE" v-if="state.mesInfo.isMe">
-    <div class="columnSS mr-1">
-      <message-bubble :text="state.mesInfo.mes" :isMe="state.mesInfo.isMe" />
+  <div class="rowEC item" v-if="state.mesInfo.isMe">
+    <div class="rowEE">
+      <div class="columnSS mr-1">
+        <message-bubble :text="state.mesInfo.mes" :isMe="state.mesInfo.isMe" />
+      </div>
+      <van-image
+        round
+        width="35"
+        height="35"
+        src="http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png"
+      />
     </div>
-    <van-image
-      round
-      width="35"
-      height="35"
-      src="http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png"
-    />
   </div>
-  <div class="rowSC" v-else>
+  <div class="rowSC item" v-else>
     <van-image
       round
       width="35"
@@ -44,4 +46,8 @@ watchEffect(() => {
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.item {
+  height: 45px;
+}
+</style>

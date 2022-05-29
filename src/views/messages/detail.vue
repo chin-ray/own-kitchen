@@ -7,6 +7,7 @@
       :mesInfo="item"
     />
   </div>
+  <detail-footer />
 </template>
 
 <script>
@@ -23,6 +24,7 @@ import {
   onMounted,
 } from "vue";
 import MessageItem from "./modules/MessageItem.vue";
+import DetailFooter from "./modules/DetailFooter.vue";
 
 const { proxy } = getCurrentInstance();
 
