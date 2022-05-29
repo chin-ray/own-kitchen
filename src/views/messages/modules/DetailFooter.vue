@@ -1,13 +1,13 @@
 <template>
   <div class="footer-wrap rowAC">
     <div class="mx-1">
-      <svg-icon icon-class="home" />
+      <svg-icon icon-class="speech" />
     </div>
     <input class="input px-1" />
     {{ props.text }}
     <div class="rowCC mx-1">
-      <svg-icon icon-class="home" />
-      <svg-icon icon-class="home" class="ml-1" />
+      <svg-icon icon-class="face" />
+      <svg-icon icon-class="add" class="ml-1" />
     </div>
   </div>
 </template>
