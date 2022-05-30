@@ -3,17 +3,24 @@
     <div class="mx-1">
       <svg-icon icon-class="speech" />
     </div>
-    <input class="input px-1" />
-    {{ props.text }}
+    <input
+      ref="input"
+      :value="props.text"
+      class="input px-1"
+      placeholder="请输入聊天内容"
+    />
     <div class="rowCC mx-1">
       <svg-icon icon-class="face" />
+      <svg-icon icon-class="add" class="ml-1" />
       <svg-icon icon-class="add" class="ml-1" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { ref, defineProps, watch } from "vue";
+
+const input = ref("");
 
 const props = defineProps({
   text: {
@@ -24,6 +31,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+});
+
+watch(input.value, (val) => {
+  console.log(val);
 });
 </script>
 
