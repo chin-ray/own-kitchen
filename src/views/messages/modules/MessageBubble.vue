@@ -21,9 +21,9 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .bubble-wrap {
-  height: 1.6rem;
+  height: 1.8rem;
   display: inline-flex;
-  padding: 0 10px;
+  padding: 0 12px;
   border-radius: 6px;
 }
 .isTa {
@@ -32,5 +32,6 @@ const props = defineProps({
 }
 .isMe {
   border-top-right-radius: 0;
+  margin-top: 0.2rem;
 }
 </style>

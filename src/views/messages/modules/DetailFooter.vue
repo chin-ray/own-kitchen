@@ -8,18 +8,36 @@
       v-model="state.inputValue"
       class="input px-1"
       placeholder="请输入聊天内容"
+      @focus="onInputFocus"
     />
     <div class="rowCC mx-1">
       <svg-icon icon-class="face" />
-      <svg-icon icon-class="add" class="ml-1" />
-      <van-icon name="add-o" size="24px" />
-      <svg-icon icon-class="minus" class="ml-1" />
+      <svg-icon
+        v-if="!state.inputFocus && state.inputValue == ''"
+        icon-class="add"
+        class="ml"
+        @click="state.inputFocus = true"
+      />
+      <svg-icon
+        v-else-if="state.inputValue == ''"
+        icon-class="minus"
+        class="ml"
+        @click="state.inputFocus = false"
+      />
+      <kit-button
+        v-else
+        type="primary"
+        style="width: 3rem; margin-left: 8px"
+        @click="onSend"
+      >
+        发送
+      </kit-button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, reactive, defineProps, watchEffect } from "vue";
+import { ref, reactive, defineProps, defineEmits, watchEffect } from "vue";
 
 const input = ref("");
 
@@ -36,7 +54,20 @@ const props = defineProps({
 
 const state = reactive({
   inputValue: "",
+  inputFocus: false,
 });
+
+// 输入框获取焦点时触发
+const onInputFocus = () => {
+  setTimeout(() => (document.body.scrollTop = document.body.scrollHeight), 500);
+};
+
+const emits = defineEmits("onSend");
+
+// 发送消息
+const onSend = () => {
+  emits("onSend", state.inputValue);
+};
 
 watchEffect(() => {
   state.inputValue = props.text;
@@ -47,7 +78,7 @@ watchEffect(() => {
 .footer-wrap {
   height: 50px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: var(--van-white);
 

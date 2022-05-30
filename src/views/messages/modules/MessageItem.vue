@@ -1,7 +1,10 @@
 <template>
   <div class="rowEC item" v-if="state.mesInfo.isMe">
-    <div class="rowEE">
-      <div class="columnSS mr-1">
+    <div class="rowES">
+      <div class="columnSE mr-1">
+        <span v-if="false" style="color: #323233">
+          {{ state.mesInfo.name }}
+        </span>
         <message-bubble :text="state.mesInfo.mes" :isMe="state.mesInfo.isMe" />
       </div>
       <van-image
@@ -12,7 +15,7 @@
       />
     </div>
   </div>
-  <div class="rowSC item" v-else>
+  <div class="rowSS item" v-else>
     <van-image
       round
       width="35"
@@ -20,7 +23,7 @@
       src="http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png"
     />
     <div class="columnSS ml-1">
-      <b style="color: #323233">{{ state.mesInfo.name }}</b>
+      <span v-if="false" style="color: #323233">{{ state.mesInfo.name }}</span>
       <message-bubble :text="state.mesInfo.mes" :isMe="state.mesInfo.isMe" />
     </div>
   </div>
