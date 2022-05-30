@@ -67,6 +67,7 @@ const emits = defineEmits("onSend");
 // 发送消息
 const onSend = () => {
   emits("onSend", state.inputValue);
+  state.inputValue = "";
 };
 
 watchEffect(() => {

@@ -1,6 +1,6 @@
 <template>
   <kit-navbar :title="state.userInfo.name" @click-left="toBack"></kit-navbar>
-  <div class="content bg-default p-g">
+  <div ref="panel" class="content bg-default p-g">
     <message-item
       v-for="(item, index) in state.messageList"
       :key="item.id + index"
@@ -17,9 +17,11 @@ export default {
 </script>
 <script setup>
 import {
+  ref,
   getCurrentInstance,
   defineProps,
   reactive,
+  nextTick,
   watchEffect,
   onMounted,
 } from "vue";
@@ -55,6 +57,14 @@ const onSend = (val) => {
   let mesList = [...state.messageList];
   mesList.push({ id: mesList.length, name: "", mes: val, isMe: true });
   state.messageList = mesList;
+  scrollBottom();
+};
+
+const panel = ref("");
+const scrollBottom = () => {
+  nextTick(() => {
+    panel.value.scrollTop = panel.value.scrollHeight;
+  });
 };
 
 onMounted(() => {
@@ -75,6 +85,6 @@ watchEffect(() => {
 <style scoped lang="scss">
 .content {
   height: calc(100vh - 46px - 50px);
-  overflow: auto;
+  overflow: scroll;
 }
 </style>
