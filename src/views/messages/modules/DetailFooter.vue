@@ -5,20 +5,21 @@
     </div>
     <input
       ref="input"
-      :value="props.text"
+      v-model="state.inputValue"
       class="input px-1"
       placeholder="请输入聊天内容"
     />
     <div class="rowCC mx-1">
       <svg-icon icon-class="face" />
       <svg-icon icon-class="add" class="ml-1" />
-      <svg-icon icon-class="add" class="ml-1" />
+      <van-icon name="add-o" size="24px" />
+      <svg-icon icon-class="minus" class="ml-1" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, defineProps, watch } from "vue";
+import { ref, reactive, defineProps, watchEffect } from "vue";
 
 const input = ref("");
 
@@ -33,8 +34,12 @@ const props = defineProps({
   },
 });
 
-watch(input.value, (val) => {
-  console.log(val);
+const state = reactive({
+  inputValue: "",
+});
+
+watchEffect(() => {
+  state.inputValue = props.text;
 });
 </script>
 
@@ -48,7 +53,7 @@ watch(input.value, (val) => {
 
   .input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     background-color: #eee;
     border: none;
     border-radius: 5px;
