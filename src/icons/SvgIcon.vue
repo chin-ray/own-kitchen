@@ -39,7 +39,7 @@ export default defineComponent({
 .sub-el-icon,
 .nav-icon {
   display: inline-block;
-  font-size: 15px;
+  font-size: 16px;
   margin-right: 12px;
   position: relative;
 }

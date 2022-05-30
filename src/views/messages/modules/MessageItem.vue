@@ -52,5 +52,9 @@ watchEffect(() => {
 <style scoped lang="scss">
 .item {
   height: 45px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 </style>

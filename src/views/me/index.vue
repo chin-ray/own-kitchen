@@ -1,8 +1,8 @@
 <template>
   <div class="">
     <div class="header p-g">
-      <div class="py-2 pr rowBS">
-        <div class="rowSC">
+      <div class="py-1 pr rowBS">
+        <div class="rowSC mt-2">
           <van-image
             round
             width="50"
@@ -65,9 +65,12 @@ const toSignIn = () => {
   background-color: var(--light);
   .userInfo {
     margin-left: 1em;
+    b {
+      font-size: 16px;
+    }
     span {
       color: #666;
-      font-size: 10px;
+      font-size: 14px;
       margin-top: 0.8em;
     }
   }
@@ -78,7 +81,9 @@ const toSignIn = () => {
   height: calc(100vh - 100px - 3px - 50px);
 
   :deep(.van-cell) {
-    height: 45px;
+    height: 55px;
+    display: flex;
+    align-items: center;
     .svg-icon {
       width: 0.8em;
       margin-right: 0.3em;

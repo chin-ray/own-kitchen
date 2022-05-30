@@ -31,14 +31,26 @@ const { proxy } = getCurrentInstance();
 const mesList = ref([
   {
     avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
-    nickname: "秦某",
-    mes: "你好",
+    nickname: "李某",
+    mes: "蔺，你好，我是李某",
     time: "11:51",
   },
   {
     avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
-    nickname: "秦某",
-    mes: "你好",
+    nickname: "张某",
+    mes: "蔺，你好，我是张某",
+    time: "11:51",
+  },
+  {
+    avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
+    nickname: "王某",
+    mes: "蔺，你好，我是王某",
+    time: "11:51",
+  },
+  {
+    avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
+    nickname: "宋某",
+    mes: "蔺，你好，我是宋某",
     time: "11:51",
   },
 ]);
@@ -69,12 +81,15 @@ const toDetail = () => {
   }
   .van-card__content {
     min-height: 0;
+    display: flex;
+    justify-content: center;
     .van-card__title {
-      font-weight: 600;
+      // font-weight: 600;
+      font-size: 14px;
+      color: #000;
     }
     .van-card__desc {
-      margin-top: 0.6em;
-      font-weight: 400;
+      color: #b2b2b2;
     }
     .van-card__num {
       position: absolute;
