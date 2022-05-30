@@ -7,7 +7,7 @@
       :mesInfo="item"
     />
   </div>
-  <detail-footer />
+  <detail-footer text="123" />
 </template>
 
 <script>
