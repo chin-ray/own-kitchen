@@ -47,12 +47,6 @@ const mesList = ref([
     mes: "蔺，你好，我是王某",
     time: "11:51",
   },
-  {
-    avatar: "http://ywcd.cc/wp-content/uploads/2021/03/IUG7G@ZVME278C@GU.png",
-    nickname: "宋某",
-    mes: "蔺，你好，我是宋某",
-    time: "11:51",
-  },
 ]);
 
 const toDetail = () => {
