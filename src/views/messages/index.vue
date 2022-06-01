@@ -12,6 +12,7 @@
         <van-button square text="删除" type="danger" />
       </template>
     </van-swipe-cell>
+
     <div
       class="last-content bg-default"
       :style="`height: calc(100vh - 46px - ${mesList.length * 67}px)`"
